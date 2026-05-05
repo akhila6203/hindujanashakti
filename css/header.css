@@ -10,8 +10,13 @@ body {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.home-container {
+/* .home-container {
   width: 95%;
+  margin: auto;
+} */
+ .container {
+  width: 95%;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -19,8 +24,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 0 50px;
+  gap: 20px;
+  /* padding: 0 50px; */
 }
 
 .logo-link {
@@ -171,6 +176,40 @@ body {
     top: 74px;
     right: 2%;
     width: 96%;
+    display: none;
+    padding: 12px 16px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    width: 100%;
+    padding: 6px 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 1008px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu {
+    flex-direction: column;
+    background: #f4c542;
+    position: absolute;
+    top: 74px;
+    right: 2%;
+    width: 50%;
     display: none;
     padding: 12px 16px;
     border-radius: 10px;
