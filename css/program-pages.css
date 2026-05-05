@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #efefef;
+  color: #2b2f38;
+}
+
+.program-page {
+  padding: 44px 16px 70px;
+}
+
+.program-wrap {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.program-title {
+  margin: 0 0 20px;
+  font-size: 42px;
+  color: #1e3057;
+  font-weight: 700;
+}
+
+.program-subtitle {
+  margin: 4px 0 20px;
+  font-size: 33px;
+  font-weight: 600;
+  color: #262f3f;
+}
+
+.program-paragraph {
+  margin-bottom: 34px;
+}
+
+.program-paragraph p,
+.program-text p {
+  font-size: 14px;
+  line-height: 1.95;
+  color: #4e5664;
+}
+
+.program-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: start;
+  margin-bottom: 46px;
+}
+
+.program-row.reverse {
+  direction: rtl;
+}
+
+.program-row.reverse > * {
+  direction: ltr;
+}
+
+.program-image img {
+  width: 100%;
+  display: block;
+}
+
+.program-text h3 {
+  margin: 0 0 10px;
+  font-size: 33px;
+  color: #1f2f55;
+}
+
+.compact-list {
+  margin: 0 0 16px;
+  padding-left: 18px;
+}
+
+.compact-list li {
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #4c5464;
+  line-height: 1.65;
+}
+
+.media-panel {
+  margin-top: 26px;
+  background: #f3ebbc;
+  text-align: center;
+  padding-top: 12px;
+}
+
+.media-head {
+  display: inline-block;
+  background: #57ca62;
+  color: #fff;
+  font-size: 52px;
+  padding: 4px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.media-panel h4 {
+  margin: 16px 0 8px;
+  font-size: 44px;
+  color: #1b2a29;
+}
+
+.media-panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 16px;
+}
+
+.media-panel li {
+  margin: 4px 0;
+  font-size: 33px;
+  font-weight: 600;
+  color: #1f2b3a;
+}
+
+.media-panel a {
+  color: #35608f;
+  text-decoration: none;
+}
+
+.audio-box {
+  background: #24e0c6;
+  padding: 10px 10px 18px;
+}
+
+.ghar-page .program-title {
+  font-size: 46px;
+  margin-bottom: 8px;
+}
+
+.ghar-tagline {
+  margin: 0 0 28px;
+  color: #a7332b;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.ghar-banner {
+  margin: 40px 0;
+  background: url("https://hindujanashakti.org/wp-content/uploads/2025/07/4M04KQJ_image_crop_135030.webp") center/cover no-repeat;
+  min-height: 420px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.banner-card {
+  position: relative;
+  z-index: 2;
+
+  background: rgba(255, 255, 255, 0.95);
+  max-width: 1000px;
+
+  padding: 30px 40px;
+  border-radius: 6px;
+
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e3158;
+
+  line-height: 1.4;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.belief-grid {
+  margin-bottom: 0;
+}
+
+
+
+.ttd-page .program-wrap {
+  width: min(1250px, 100%);
+}
+
+.ttd-title {
+  margin: 0 0 18px;
+  color: #1d2f57;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+ .ttd-grid {
+  gap: 10px;
+  column-count: 5;
+  column-gap: 18px;
+}
+
+.pswp__button {
+  border-radius: 6px;
+  padding: 6px;
+}
+.pswp__button i {
+  color: white !important;
+  font-size: 16px;
+}
+.pswp__counter {
+  color: white;
+  font-size: 14px;
+}
+
+
+.ttd-card {
+  background: #fff;
+  border: 1px solid #e5e7ec;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  break-inside: avoid;
+  margin-bottom: 12px;
+}
+
+.ttd-card img {
+  width: 100%;
+  height: auto;
+  /* aspect-ratio: 3 / 4; */
+  object-fit: cover;
+  display: block;
+}
+
+.ttd-card:hover {
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+
+@media (max-width: 1024px) {
+  .program-title {
+    font-size: 34px;
+  }
+
+  .program-subtitle,
+  .program-text h3 {
+    font-size: 26px;
+  }
+
+  .media-head {
+    font-size: 42px;
+  }
+
+  .media-panel h4 {
+    font-size: 34px;
+  }
+
+  .media-panel li {
+    font-size: 25px;
+  }
+
+  .banner-card {
+    font-size: 36px;
+  }
+
+  .ttd-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .program-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .program-title {
+    font-size: 28px;
+  }
+
+  .program-subtitle,
+  .program-text h3 {
+    font-size: 22px;
+  }
+
+  .media-head {
+    font-size: 32px;
+  }
+
+  .media-panel h4 {
+    font-size: 28px;
+  }
+
+  .media-panel li {
+    font-size: 20px;
+  }
+
+  .ghar-page .program-title {
+    font-size: 32px;
+  }
+
+  .ghar-tagline {
+    font-size: 20px;
+  }
+
+  .banner-card {
+    font-size: 18px;
+    padding: 18px;
+  }
+
+  .ghar-banner {
+    min-height: 260px;
+  }
+  .ttd-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .ttd-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

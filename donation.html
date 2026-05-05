@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate | Hindu Jana Shakti Foundation</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/donation.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main class="donation-page">
+      <section class="donation-card">
+        <header class="donation-head">
+          <h1>Hindu Jana Shakti Foundation Donation</h1>
+          <p>Support our cause with a secure donation</p>
+        </header>
+
+        <form class="donation-form" action="#" method="post">
+          <div class="section-title">Donor Details</div>
+          <div class="field-block">
+            <p class="label-text">Select Your Citizenship</p>
+            <div class="radio-row">
+              <label><input type="radio" name="citizenship" checked /> Indian Citizen</label>
+              <label><input type="radio" name="citizenship" /> Indian Citizen (Not residing in India - NRE, NRI, NRO)</label>
+              <label><input type="radio" name="citizenship" /> Foreign National</label>
+            </div>
+          </div>
+
+          <div class="section-title">Personal Details</div>
+          <div class="grid-4">
+            <div class="field">
+              <label for="title">Title</label>
+              <select id="title" name="title">
+                <option>Mr</option>
+                <option>Ms</option>
+                <option>Mrs</option>
+                <option>Dr</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fullname">Full Name <span>*</span></label>
+              <input id="fullname" name="fullname" type="text" required />
+            </div>
+            <div class="field">
+              <label for="dob">Date of Birth</label>
+              <input id="dob" name="dob" type="date" />
+            </div>
+            <div class="field">
+              <label for="email">Email Address <span>*</span></label>
+              <input id="email" name="email" type="email" required />
+            </div>
+          </div>
+
+          <div class="grid-3">
+            <div class="field">
+              <label for="whatsapp">WhatsApp Mobile <span>*</span></label>
+              <input id="whatsapp" name="whatsapp" type="tel" placeholder="10-digit number" required />
+              <small>For donation updates</small>
+            </div>
+            <div class="field">
+              <label for="mobile">Alternate Mobile</label>
+              <input id="mobile" name="mobile" type="tel" placeholder="10-digit number" />
+            </div>
+            <div class="field">
+              <label for="amount">Donation Amount (₹) <span>*</span></label>
+              <input id="amount" name="amount" type="number" min="1" required />
+            </div>
+          </div>
+
+          <div class="field message">
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" name="message" rows="3" placeholder="Leave a message..."></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="certificate" />
+            I would like to receive 80(G) Certificate
+          </label>
+
+          <div class="notice">
+            <p>As per the Indian Income Tax Department's rules, a donor is required to add their address and PAN number in case they wish to receive the 80G tax-exemption certificate.</p>
+            <p>Donations to Hindu Jana Shakti Foundation are Tax Exempted under section 80G of the Indian Income Tax Act.</p>
+          </div>
+
+          <button class="donate-btn-main" type="submit">DONATE SECURELY</button>
+
+          <div class="secure-line">
+            <p>Secure payment powered by <strong>Razorpay</strong></p>
+            <p>Your payment information is encrypted and secure</p>
+          </div>
+
+          <a class="back-link" href="index.html">←Back to Website</a>
+        </form>
+      </section>
+    </main>
+    <div id="footer"></div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

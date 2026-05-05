@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #efefef;
+}
+
+/* PAGE */
+.programs-page {
+  min-height: 80vh;
+  padding: 50px 20px;
+}
+
+/* CONTAINER */
+.programs-wrap {
+  width: min(1100px, 95%);
+  margin: auto;
+}
+
+/* TITLE */
+.programs-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1b2e57;
+  margin-bottom: 30px;
+}
+
+/* MESSAGE (LIGHT YELLOW COLOR LIKE IMAGE) */
+.programs-message {
+  text-align: center;
+  font-size: 20px;
+  color: #e6c87a;  /* 🔥 important (light yellow tone) */
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .programs-title {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+
+  .programs-message {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #efefef;
+}
+.terms-container {
+  margin: 20px auto; /* reduce */
+}
+/* PAGE */
+.team-page {
+  min-height: 80vh;
+  padding: 50px 20px;
+}
+
+/* CONTAINER */
+.team-wrap {
+  width: min(1100px, 95%);
+  margin: auto;
+}
+
+/* TITLE */
+.team-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1b2e57;
+  margin-bottom: 50px; 
+}
+
+/* MESSAGE */
+.team-message {
+  text-align: center;
+  font-size: 20px;
+  color: #6b5f3a;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .team-title {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+
+  .team-message {
+    font-size: 16px;
+  }
+}

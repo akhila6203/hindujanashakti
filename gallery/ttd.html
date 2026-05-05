@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TTD News</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/program-pages.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main class="program-page ttd-page">
+      <section class="program-wrap">
+        <h1 class="ttd-title">TTD News</h1>
+        <div class="ttd-grid" id="ttdGrid"></div>
+        <!-- 🔥 PhotoSwipe Root -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"></div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+    <script src="../js/script.js"></script>
+    <script src="../js/program-pages.js"></script>
+    
+    <script type="module">
+  import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#ttdGrid',
+    children: 'a',
+    showHideAnimationType: 'zoom',
+    pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
+  });
+
+  lightbox.on('uiRegister', function() {
+
+    // // 🔍 ZOOM
+    // lightbox.pswp.ui.registerElement({
+    //   name: 'zoom-button',
+    //   order: 9,
+    //   isButton: true,
+    //   html: '<i class="fa-solid fa-magnifying-glass-plus"></i>',
+    //   onClick: () => {
+    //     lightbox.pswp.toggleZoom();
+    //   }
+    // });
+
+    // 🔲 FULLSCREEN
+    lightbox.pswp.ui.registerElement({
+      name: 'fullscreen-button',
+      order: 8,
+      isButton: true,
+      html: '<i class="fa-solid fa-expand"></i>',
+      onClick: () => {
+        if (!document.fullscreenElement) {
+          document.documentElement.requestFullscreen();
+        } else {
+          document.exitFullscreen();
+        }
+      }
+    });
+
+    // 🔗 SHARE (REAL SHARE)
+    lightbox.pswp.ui.registerElement({
+      name: 'share-button',
+      order: 7,
+      isButton: true,
+      html: '<i class="fa-solid fa-share-nodes"></i>',
+      onClick: () => {
+        const url = lightbox.pswp.currSlide.data.src;
+
+        if (navigator.share) {
+          navigator.share({
+            title: 'TTD Image',
+            url: url
+          });
+        } else {
+          navigator.clipboard.writeText(url);
+          alert("Image link copied!");
+        }
+      }
+    });
+
+  });
+
+  lightbox.init();
+</script>
+  </body>
+</html>

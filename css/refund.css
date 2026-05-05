@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f4f6f9;
+  color: #4e5664;
+}
+
+/* PAGE */
+.policy-page {
+  padding: 60px 16px;
+}
+
+/* CONTAINER */
+.policy-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* TITLE */
+.policy-container h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1d2f57;
+  margin-bottom: 20px;
+}
+
+/* PARAGRAPH */
+.policy-container p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+/* HEADINGS */
+.policy-container h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1d2f57;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* LIST */
+.policy-container ul {
+  padding-left: 18px;
+  margin-bottom: 20px;
+}
+
+.policy-container ul li {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .policy-container h1 {
+    font-size: 26px;
+  }
+
+  .policy-container h3 {
+    font-size: 14px;
+  }
+
+  .policy-container p,
+  .policy-container ul li {
+    font-size: 13px;
+  }
+}

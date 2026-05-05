@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Press Releases</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/media-pages.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <main class="media-page">
+      <section class="media-wrap">
+        <h1 class="media-title">Press Releases</h1>
+
+        <section class="press-feature">
+          <a class="press-main-card" href="press-detail.html">
+            <!-- <div class="press-top">
+              <div class="press-date"><strong>10</strong><span>JAN, 2026</span></div>
+            </div> -->
+            <div class="press-top">
+              <img src="../images/PressRelease/pradminimg.png" alt="Press Main" />
+
+              <div class="press-date">
+                <strong>10</strong>
+                <span>JAN, 2026</span>
+              </div>
+            </div>
+            <div class="press-body">
+              <p>Admin &nbsp; Comment Off</p>
+              <h2>The Importance of Cultural Awareness in Today's Society</h2>
+              <p>View Post →</p>
+            </div>
+          </a>
+          <div></div>
+        </section>
+         <div class="press-grid" id="pressGrid"></div>
+
+    <!-- PhotoSwipe root -->
+     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true"></div>
+        
+      </section>
+    </main>
+
+
+    <div id="footer"></div>
+    <script src="../js/script.js"></script>
+     <script src="../js/program-pages.js"></script>
+
+    <script type="module">
+      import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.js';
+
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: '#pressGrid',
+        children: 'a',
+        showHideAnimationType: 'zoom',
+        pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.js')
+      });
+
+      lightbox.on('uiRegister', () => {
+
+        // FULLSCREEN
+        lightbox.pswp.ui.registerElement({
+          name: 'fullscreen',
+          order: 8,
+          isButton: true,
+          html: '<i class="fa-solid fa-expand"></i>',
+          onClick: () => {
+            if (!document.fullscreenElement) {
+              document.documentElement.requestFullscreen();
+            } else {
+              document.exitFullscreen();
+            }
+          }
+        });
+
+        // SHARE
+        lightbox.pswp.ui.registerElement({
+          name: 'share',
+          order: 7,
+          isButton: true,
+          html: '<i class="fa-solid fa-share-nodes"></i>',
+          onClick: () => {
+            const url = lightbox.pswp.currSlide.data.src;
+
+            if (navigator.share) {
+              navigator.share({ url });
+            } else {
+              navigator.clipboard.writeText(url);
+              alert("Copied!");
+            }
+          }
+        });
+
+      });
+
+      lightbox.init();
+      </script>
+  </body>
+</html>
